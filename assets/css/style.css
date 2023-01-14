@@ -10,7 +10,7 @@
   width: 100vw;
 }
 
-#title {
+.title {
   text-align: center;
   font-size: 70px;
   padding: 20px;
@@ -30,7 +30,10 @@
 }
 
 #playerChoice,
-#cpuChoice {
+#cpuChoice,
+#rock,
+#paper,
+#scissors {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,4 +42,17 @@
   width: 200px;
   height: 200px;
   font-size: 100px;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+#rock,
+#paper,
+#scissors {
+  cursor: pointer;
 }
