@@ -39,9 +39,9 @@
   align-items: center;
   border: 2px solid black;
   border-radius: 10px;
-  width: 200px;
-  height: 200px;
-  font-size: 100px;
+  width: 140px;
+  height: 140px;
+  font-size: 70px;
 }
 
 .choices {
@@ -55,4 +55,17 @@
 #paper,
 #scissors {
   cursor: pointer;
+  transition: opacity 0.15s, background-color 0.15s;
+}
+
+#rock:active,
+#paper:active,
+#scissors:active {
+  opacity: 0.6;
+}
+
+#rock:hover,
+#paper:hover,
+#scissors:hover {
+  background-color: red;
 }
