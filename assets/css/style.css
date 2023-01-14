@@ -19,7 +19,7 @@
 .information {
   display: flex;
   gap: 20px;
-  padding: 40px;
+  padding: 20px;
   justify-content: center;
 }
 
@@ -27,6 +27,11 @@
 .cpu__container #cpuScore {
   text-align: center;
   padding-bottom: 10px;
+}
+
+.result {
+  text-align: center;
+  height: 20px;
 }
 
 #playerChoice,

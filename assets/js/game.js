@@ -10,6 +10,8 @@ let CPU_CHOICE = document.querySelector("#cpuChoice");
 let cpuMove;
 let cpuScore = 0;
 
+let versusResult = document.querySelector(".result");
+
 /* Player moves */
 
 function chooseRock() {
@@ -35,6 +37,36 @@ function chooseScissors() {
 function gameStart() {
   cpuMove = Math.floor(Math.random() * 3) + 1;
   console.log(cpuMove);
+
+  // 1 is for rock
+  // 2 is for paper
+  // 3 is for scissors
+
+  if (playerMove == 1 && cpuMove == 1) {
+    versusResult.textContent = "Rock can't beat a rock! It's a tie!";
+  } else if (playerMove == 1 && cpuMove == 2) {
+    versusResult.textContent = "Paper beats rock! You lose!";
+    cpuScore++;
+  } else if (playerMove == 1 && cpuMove == 3) {
+    versusResult.textContent = "Rock beats scissors! You win!";
+    playerScore++;
+  } else if (playerMove == 2 && cpuMove == 2) {
+    versusResult.textContent = "Paper can't beat a paper! It's a tie!";
+  } else if (playerMove == 2 && cpuMove == 3) {
+    versusResult.textContent = "Scissors beats paper! You lose!";
+    cpuScore++;
+  } else if (playerMove == 2 && cpuMove == 1) {
+    versusResult.textContent = "Paper beats rock! You win!";
+    playerScore++;
+  } else if (playerMove == 3 && cpuMove == 3) {
+    versusResult.textContent = "Scissors can't beat a scissors! It's a tie!";
+  } else if (playerMove == 3 && cpuMove == 1) {
+    versusResult.textContent = "Rock beats scissors! You lose!";
+    cpuScore++;
+  } else if (playerMove == 3 && cpuMove == 2) {
+    versusResult.textContent = "Scissors beats paper! You win!";
+    playerScore++;
+  }
 }
 
 function checkScore() {}
