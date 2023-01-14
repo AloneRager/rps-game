@@ -5,8 +5,38 @@
   font-family: "Times New Roman", Times, serif;
 }
 
+.container {
+  border: 1px solid red;
+  width: 100vw;
+}
+
 #title {
   text-align: center;
   font-size: 70px;
   padding: 20px;
+}
+
+.information {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  justify-content: center;
+}
+
+.player__container #playerScore,
+.cpu__container #cpuScore {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#playerChoice,
+#cpuChoice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  font-size: 100px;
 }
