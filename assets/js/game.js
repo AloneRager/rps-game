@@ -15,7 +15,7 @@ let versusResult = document.querySelector(".result");
 let ROCK_BUTTON = document.querySelector("#rock");
 let PAPER_BUTTON = document.querySelector("#paper");
 let SCISSORS_BUTTON = document.querySelector("#scissors");
-let button = document.querySelectorAll("button");
+let button = document.querySelectorAll(".btn");
 
 /* Player moves */
 
