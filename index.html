@@ -9,18 +9,21 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <header class="title container">Rock, Paper, Scissors</header>
+    <header class="center__title container">
+      <p class="title">Rock, Paper, Scissors vs AI</p>
+    </header>
     <div class="information container">
       <div class="player__container">
         <div id="playerScore">Player Score: 0</div>
         <div id="playerChoice">✌️</div>
       </div>
+      <div class="dash__container"></div>
       <div class="cpu__container">
         <div id="cpuScore">CPU Score: 0</div>
         <div id="cpuChoice">✌️</div>
       </div>
     </div>
-    <div class="result container"></div>
+    <div class="result container">Pick a move to start the game</div>
     <div class="choices container">
       <div onclick="chooseRock()" id="rock">👊</div>
       <div onclick="choosePaper()" id="paper">✋</div>

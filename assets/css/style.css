@@ -10,10 +10,16 @@
   width: 100vw;
 }
 
+.center__title {
+  display: flex;
+  justify-content: center;
+}
+
 .title {
   text-align: center;
-  font-size: 70px;
+  font-size: 60px;
   padding: 20px;
+  max-width: 600px;
 }
 
 .information {
@@ -29,13 +35,26 @@
   padding-bottom: 10px;
 }
 
+.dash__container {
+  border-left: 1px solid black;
+}
+
 .result {
   text-align: center;
-  height: 20px;
+  font-size: 25px;
+  height: 30px;
 }
 
 #playerChoice,
-#cpuChoice,
+#cpuChoice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  font-size: 60px;
+}
+
 #rock,
 #paper,
 #scissors {
@@ -44,9 +63,9 @@
   align-items: center;
   border: 2px solid black;
   border-radius: 10px;
-  width: 140px;
-  height: 140px;
-  font-size: 70px;
+  width: 120px;
+  height: 110px;
+  font-size: 50px;
 }
 
 .choices {
