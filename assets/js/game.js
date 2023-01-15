@@ -122,4 +122,10 @@ function enableMoves() {
   }
 }
 
-function resetGameState() {}
+function resetGameState() {
+  playerScore = 0;
+  cpuScore = 0;
+  PLAYER_SCORE.textContent = `Player Score: ${playerScore}`;
+  CPU_SCORE.textContent = `CPU Score: ${cpuScore}`;
+  enableMoves();
+}
