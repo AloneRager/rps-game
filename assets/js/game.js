@@ -15,25 +15,27 @@ let versusResult = document.querySelector(".result");
 let ROCK_BUTTON = document.querySelector("#rock");
 let PAPER_BUTTON = document.querySelector("#paper");
 let SCISSORS_BUTTON = document.querySelector("#scissors");
+
 let button = document.querySelectorAll(".btn");
+let reset = document.querySelector("#reset");
 
 /* Player moves */
 
 function chooseRock() {
   playerMove = 1;
-  console.log(playerMove);
+  /* console.log(playerMove); */
   gameStart();
 }
 
 function choosePaper() {
   playerMove = 2;
-  console.log(playerMove);
+  /* console.log(playerMove); */
   gameStart();
 }
 
 function chooseScissors() {
   playerMove = 3;
-  console.log(playerMove);
+  /* console.log(playerMove); */
   gameStart();
 }
 
@@ -41,7 +43,7 @@ function chooseScissors() {
 
 function gameStart() {
   cpuMove = Math.floor(Math.random() * 3) + 1;
-  console.log(cpuMove);
+  /* console.log(cpuMove); */
 
   // 1 is for rock
   // 2 is for paper
@@ -129,6 +131,9 @@ function disableMoves() {
     button[btn].classList.remove("enabled");
     button[btn].classList.add("disabled");
   }
+
+  reset.classList.remove("notVisible");
+  reset.classList.add("visible");
 }
 
 function enableMoves() {
@@ -140,6 +145,9 @@ function enableMoves() {
     button[btn].classList.add("enabled");
     button[btn].classList.remove("disabled");
   }
+
+  reset.classList.remove("visible");
+  reset.classList.add("notVisible");
 }
 
 function resetGameState() {

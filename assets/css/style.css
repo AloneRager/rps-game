@@ -6,7 +6,7 @@
 }
 
 .container {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100vw;
 }
 
@@ -89,4 +89,27 @@
 
 .enabled:hover {
   background-color: red;
+}
+
+.resetGame {
+  text-align: center;
+  height: 60px;
+}
+
+.visible {
+  font-size: 23px;
+  cursor: pointer;
+  margin-top: 4px;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 120px;
+  height: 50px;
+}
+
+.visible:hover {
+  background-color: red;
+}
+
+.notVisible {
+  display: none;
 }
