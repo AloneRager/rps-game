@@ -126,7 +126,8 @@ function disableMoves() {
   SCISSORS_BUTTON.disabled = true;
 
   for (let btn = 0; btn <= 2; btn++) {
-    button[btn].classList.toggle("enabled"); // If class ".enabled" exist remove it, if not then add it
+    button[btn].classList.remove("enabled");
+    button[btn].classList.add("disabled");
   }
 }
 
@@ -136,7 +137,8 @@ function enableMoves() {
   SCISSORS_BUTTON.disabled = false;
 
   for (let btn = 0; btn <= 2; btn++) {
-    button[btn].classList.toggle("enabled"); // If class ".enabled" exist remove it, if not then add it
+    button[btn].classList.add("enabled");
+    button[btn].classList.remove("disabled");
   }
 }
 
