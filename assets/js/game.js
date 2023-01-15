@@ -12,6 +12,11 @@ let cpuScore = 0;
 
 let versusResult = document.querySelector(".result");
 
+let ROCK_BUTTON = document.querySelector("#rock");
+let PAPER_BUTTON = document.querySelector("#paper");
+let SCISSORS_BUTTON = document.querySelector("#scissors");
+let button = document.querySelectorAll("button");
+
 /* Player moves */
 
 function chooseRock() {
@@ -90,9 +95,31 @@ function gameStart() {
 function checkScore() {
   if (playerScore == scoreToWin) {
     versusResult.textContent = "You win!";
+    disableMoves();
   } else if (cpuScore == scoreToWin) {
     versusResult.textContent = "You lose!";
+    disableMoves();
   }
 }
 
-function matchResult() {}
+function disableMoves() {
+  ROCK_BUTTON.disabled = true;
+  PAPER_BUTTON.disabled = true;
+  SCISSORS_BUTTON.disabled = true;
+
+  for (let btn = 0; btn <= 2; btn++) {
+    button[btn].classList.toggle("enabled"); // If class ".enabled" exist remove it, if not then add it
+  }
+}
+
+function enableMoves() {
+  ROCK_BUTTON.disabled = false;
+  PAPER_BUTTON.disabled = false;
+  SCISSORS_BUTTON.disabled = false;
+
+  for (let btn = 0; btn <= 2; btn++) {
+    button[btn].classList.toggle("enabled"); // If class ".enabled" exist remove it, if not then add it
+  }
+}
+
+function resetGameState() {}
