@@ -47,25 +47,37 @@ function gameStart() {
   } else if (playerMove == 1 && cpuMove == 2) {
     versusResult.textContent = "Paper beats rock! You lose!";
     cpuScore++;
+    PLAYER_SCORE.textContent = `Player Score: ${playerScore}`;
+    CPU_SCORE.textContent = `CPU Score: ${cpuScore}`;
   } else if (playerMove == 1 && cpuMove == 3) {
     versusResult.textContent = "Rock beats scissors! You win!";
     playerScore++;
+    PLAYER_SCORE.textContent = `Player Score: ${playerScore}`;
+    CPU_SCORE.textContent = `CPU Score: ${cpuScore}`;
   } else if (playerMove == 2 && cpuMove == 2) {
     versusResult.textContent = "Paper can't beat a paper! It's a tie!";
   } else if (playerMove == 2 && cpuMove == 3) {
     versusResult.textContent = "Scissors beats paper! You lose!";
     cpuScore++;
+    PLAYER_SCORE.textContent = `Player Score: ${playerScore}`;
+    CPU_SCORE.textContent = `CPU Score: ${cpuScore}`;
   } else if (playerMove == 2 && cpuMove == 1) {
     versusResult.textContent = "Paper beats rock! You win!";
     playerScore++;
+    PLAYER_SCORE.textContent = `Player Score: ${playerScore}`;
+    CPU_SCORE.textContent = `CPU Score: ${cpuScore}`;
   } else if (playerMove == 3 && cpuMove == 3) {
     versusResult.textContent = "Scissors can't beat a scissors! It's a tie!";
   } else if (playerMove == 3 && cpuMove == 1) {
     versusResult.textContent = "Rock beats scissors! You lose!";
     cpuScore++;
+    PLAYER_SCORE.textContent = `Player Score: ${playerScore}`;
+    CPU_SCORE.textContent = `CPU Score: ${cpuScore}`;
   } else if (playerMove == 3 && cpuMove == 2) {
     versusResult.textContent = "Scissors beats paper! You win!";
     playerScore++;
+    PLAYER_SCORE.textContent = `Player Score: ${playerScore}`;
+    CPU_SCORE.textContent = `CPU Score: ${cpuScore}`;
   }
 }
 
