@@ -78,21 +78,15 @@
   padding: 20px;
 }
 
-#rock,
-#paper,
-#scissors {
+.enabled {
   cursor: pointer;
   transition: opacity 0.15s, background-color 0.15s;
 }
 
-#rock:active,
-#paper:active,
-#scissors:active {
+.enabled:active {
   opacity: 0.6;
 }
 
-#rock:hover,
-#paper:hover,
-#scissors:hover {
+.enabled:hover {
   background-color: red;
 }
