@@ -48,42 +48,60 @@ function gameStart() {
   // 3 is for scissors
 
   if (playerMove == 1 && cpuMove == 1) {
+    PLAYER_CHOICE.textContent = "👊";
+    CPU_CHOICE.textContent = "👊";
     versusResult.textContent = "Rock can't beat a rock! It's a tie!";
   } else if (playerMove == 1 && cpuMove == 2) {
+    PLAYER_CHOICE.textContent = "👊";
+    CPU_CHOICE.textContent = "✋";
     versusResult.textContent = "Paper beats rock! You lose!";
     cpuScore++;
     PLAYER_SCORE.textContent = `Player Score: ${playerScore}`;
     CPU_SCORE.textContent = `CPU Score: ${cpuScore}`;
     checkScore();
   } else if (playerMove == 1 && cpuMove == 3) {
+    PLAYER_CHOICE.textContent = "👊";
+    CPU_CHOICE.textContent = "✌️";
     versusResult.textContent = "Rock beats scissors! You win!";
     playerScore++;
     PLAYER_SCORE.textContent = `Player Score: ${playerScore}`;
     CPU_SCORE.textContent = `CPU Score: ${cpuScore}`;
     checkScore();
   } else if (playerMove == 2 && cpuMove == 2) {
+    PLAYER_CHOICE.textContent = "✋";
+    CPU_CHOICE.textContent = "✋";
     versusResult.textContent = "Paper can't beat a paper! It's a tie!";
   } else if (playerMove == 2 && cpuMove == 3) {
+    PLAYER_CHOICE.textContent = "✋";
+    CPU_CHOICE.textContent = "✌️";
     versusResult.textContent = "Scissors beats paper! You lose!";
     cpuScore++;
     PLAYER_SCORE.textContent = `Player Score: ${playerScore}`;
     CPU_SCORE.textContent = `CPU Score: ${cpuScore}`;
     checkScore();
   } else if (playerMove == 2 && cpuMove == 1) {
+    PLAYER_CHOICE.textContent = "✋";
+    CPU_CHOICE.textContent = "👊";
     versusResult.textContent = "Paper beats rock! You win!";
     playerScore++;
     PLAYER_SCORE.textContent = `Player Score: ${playerScore}`;
     CPU_SCORE.textContent = `CPU Score: ${cpuScore}`;
     checkScore();
   } else if (playerMove == 3 && cpuMove == 3) {
+    PLAYER_CHOICE.textContent = "✌️";
+    CPU_CHOICE.textContent = "✌️";
     versusResult.textContent = "Scissors can't beat a scissors! It's a tie!";
   } else if (playerMove == 3 && cpuMove == 1) {
+    PLAYER_CHOICE.textContent = "✌️";
+    CPU_CHOICE.textContent = "👊";
     versusResult.textContent = "Rock beats scissors! You lose!";
     cpuScore++;
     PLAYER_SCORE.textContent = `Player Score: ${playerScore}`;
     CPU_SCORE.textContent = `CPU Score: ${cpuScore}`;
     checkScore();
   } else if (playerMove == 3 && cpuMove == 2) {
+    PLAYER_CHOICE.textContent = "✌️";
+    CPU_CHOICE.textContent = "✋";
     versusResult.textContent = "Scissors beats paper! You win!";
     playerScore++;
     PLAYER_SCORE.textContent = `Player Score: ${playerScore}`;
@@ -123,6 +141,9 @@ function enableMoves() {
 }
 
 function resetGameState() {
+  versusResult.textContent = "Pick a move to start the game";
+  PLAYER_CHOICE.textContent = "";
+  CPU_CHOICE.textContent = "";
   playerScore = 0;
   cpuScore = 0;
   PLAYER_SCORE.textContent = `Player Score: ${playerScore}`;
