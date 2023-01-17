@@ -1,5 +1,29 @@
-let scoreToWin = 5;
+/* Scoring function */
+const defaultScoreToWin = 5;
+let scoreToWin = prompt(
+  "How many score it takes for players to win? minimum of 1 and maximum of 50 (empty for default)"
+);
 
+function setScoreToWin(score) {
+  scoreToWin = score;
+  return;
+}
+
+if (!scoreToWin) {
+  setScoreToWin(defaultScoreToWin);
+}
+
+while (scoreToWin <= 4 || scoreToWin >= 51) {
+  scoreToWin = prompt(
+    "How many score it takes for players to win? minimum of 1 and maximum of 50 (empty for default)"
+  );
+  if (!scoreToWin) {
+    setScoreToWin(defaultScoreToWin);
+  }
+  setScoreToWin(scoreToWin);
+}
+
+/* Global queries */
 let PLAYER_SCORE = document.querySelector("#playerScore");
 let PLAYER_CHOICE = document.querySelector("#playerChoice");
 let playerMove;
