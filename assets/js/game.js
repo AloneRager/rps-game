@@ -13,7 +13,7 @@ if (!scoreToWin) {
   setScoreToWin(defaultScoreToWin);
 }
 
-while (scoreToWin <= 4 || scoreToWin >= 51) {
+while (scoreToWin < 1 || scoreToWin > 50) {
   scoreToWin = prompt(
     "How many score it takes for players to win? minimum of 1 and maximum of 50 (empty for default)"
   );
