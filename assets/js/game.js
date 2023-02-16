@@ -34,34 +34,42 @@ let CPU_CHOICE = document.querySelector("#cpuChoice");
 let cpuMove;
 let cpuScore = 0;
 
-let versusResult = document.querySelector(".result");
+const versusResult = document.querySelector(".result");
 
-let ROCK_BUTTON = document.querySelector("#rock");
-let PAPER_BUTTON = document.querySelector("#paper");
-let SCISSORS_BUTTON = document.querySelector("#scissors");
+const ROCK_BUTTON = document.querySelector("#rock");
+const PAPER_BUTTON = document.querySelector("#paper");
+const SCISSORS_BUTTON = document.querySelector("#scissors");
 
-let button = document.querySelectorAll(".btn");
-let reset = document.querySelector("#reset");
+const button = document.querySelectorAll(".btn");
+const reset = document.querySelector("#reset");
 
 /* Player moves */
 
-function chooseRock() {
-  playerMove = 1;
-  /* console.log(playerMove); */
+ROCK_BUTTON.addEventListener("click", () => {
+  playerMove = 1
   gameStart();
-}
+});
 
-function choosePaper() {
-  playerMove = 2;
-  /* console.log(playerMove); */
+PAPER_BUTTON.addEventListener("click", () => {
+  playerMove = 2
   gameStart();
-}
+});
 
-function chooseScissors() {
-  playerMove = 3;
-  /* console.log(playerMove); */
+SCISSORS_BUTTON.addEventListener("click", () => {
+  playerMove = 3
   gameStart();
-}
+});
+
+reset.addEventListener("click", () => {
+  versusResult.textContent = "Pick a move to start the game";
+  PLAYER_CHOICE.textContent = "";
+  CPU_CHOICE.textContent = "";
+  playerScore = 0;
+  cpuScore = 0;
+  PLAYER_SCORE.textContent = `Player Score: ${playerScore}`;
+  CPU_SCORE.textContent = `CPU Score: ${cpuScore}`;
+  enableMoves();
+});
 
 /* Game and match */
 
@@ -172,15 +180,4 @@ function enableMoves() {
 
   reset.classList.remove("visible");
   reset.classList.add("notVisible");
-}
-
-function resetGameState() {
-  versusResult.textContent = "Pick a move to start the game";
-  PLAYER_CHOICE.textContent = "";
-  CPU_CHOICE.textContent = "";
-  playerScore = 0;
-  cpuScore = 0;
-  PLAYER_SCORE.textContent = `Player Score: ${playerScore}`;
-  CPU_SCORE.textContent = `CPU Score: ${cpuScore}`;
-  enableMoves();
 }
