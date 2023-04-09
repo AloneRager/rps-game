@@ -4,10 +4,7 @@ let scoreToWin = prompt(
   "How many score it takes for players to win? minimum of 1 and maximum of 50 (empty for default)"
 );
 
-function setScoreToWin(score) {
-  scoreToWin = score;
-  return;
-}
+const setScoreToWin = (score) => scoreToWin = score;
 
 if (!scoreToWin) {
   setScoreToWin(defaultScoreToWin);
@@ -24,13 +21,13 @@ while (scoreToWin < 1 || scoreToWin > 50) {
 }
 
 /* Global queries */
-let PLAYER_SCORE = document.querySelector("#playerScore");
-let PLAYER_CHOICE = document.querySelector("#playerChoice");
+const PLAYER_SCORE = document.querySelector("#playerScore");
+const PLAYER_CHOICE = document.querySelector("#playerChoice");
 let playerMove;
 let playerScore = 0;
 
-let CPU_SCORE = document.querySelector("#cpuScore");
-let CPU_CHOICE = document.querySelector("#cpuChoice");
+const CPU_SCORE = document.querySelector("#cpuScore");
+const CPU_CHOICE = document.querySelector("#cpuChoice");
 let cpuMove;
 let cpuScore = 0;
 
